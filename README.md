@@ -40,15 +40,15 @@ Images have been downloaded from the HathiTrust Digital Library and binarize usi
 
 Ground truth transcriptions are needed to perform training according to [Kraken's documentation](http://kraken.re/ketos.html). Many tools could be used here. I chose Transkribus to segment and transcribe automatically 80 images from monographs 109, 109 bis and 110 ; I then corrected this first transcription handly.
 
-Transkribus allows exports in `ALTO` and `text`.
+Transkribus allows exports in `ALTO` and `text` ([000_ground_truth.txt](https://github.com/jeandamien-genero/kraken-ocr-data/blob/main/training_data_sample/000_ground_truth.txt)).
 
 #### Step three : segmenting with Kraken and implementing ground truth
 
-In a directory containing all `.tiff`images, I ran the `ketos  transcribe -o output.html *.tiff` command. It initialized an `output.html` file containing segmented images and boxes for transcription of each segment. I filled out them with ground truth from Transkribus with the help of a Python `Beautifull Soup` script ([`training_data`](https://github.com/jeandamien-genero/kraken-ocr-data/blob/a5e109407e1a36686e5384c68ab1a0f19711ad55/scripts/process_scripts.py#L45)).
+In a directory containing all `.tiff`images, I ran the `ketos  transcribe -o output.html *.tiff` command. It initialized an [`output.html`](https://github.com/jeandamien-genero/kraken-ocr-data/blob/main/output_109a.html) file containing segmented images and boxes for transcription of each segment. I filled out them with ground truth from Transkribus with the help of a Python `Beautifull Soup` script ([`training_data`](https://github.com/jeandamien-genero/kraken-ocr-data/blob/a5e109407e1a36686e5384c68ab1a0f19711ad55/scripts/process_scripts.py#L45)).
 
 #### Step four : getting training data and perform actual training
 
-I ran the `ketos extract --output output_directory *.html`command, wich analizes the `output.html`file and creates a pair of `.png` and `.txt` files containing image of a segment and its ground truth transcription in a new directory (`output_directory`).
+I ran the `ketos extract --output output_directory *.html`command, wich analizes the `output.html`file and creates a pair of `.png` and `.txt` files containing image of a segment and its ground truth transcription in a new directory ([`output_directory`](https://github.com/jeandamien-genero/kraken-ocr-data/tree/main/training_data_sample)).
 
 After this, I performed the actual training by running the `ketos train *.png` command in the `output_directory`. Fourteen epochs have been necessary to complete the training. A each epoch, a model is made up (`.mlmodel`) ; Kraken stops only when the error rate doesn not increasse significally anymore. It then choose a best model. My best model is epoch 9 (98% accuracy report). You can check out all the process in the [terminal_kraken_training.txt](https://github.com/jeandamien-genero/kraken-ocr-data/blob/main/terminal_kraken_training.txt) file.
 
