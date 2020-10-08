@@ -38,7 +38,7 @@ Images have been downloaded from the HathiTrust Digital Library and binarize usi
 
 #### Step two : getting ground truth transcriptions
 
-Ground truth transcriptions are needed to perform training according to [Kraken's documentation](http://kraken.re/ketos.html). Many tools could be used here. I chose Transkribus to segment and transcribe automatically 80 images from monographs 109, 109 bis and 110 ; I then corrected this first transcription handly.
+Ground truth transcriptions are needed to perform training. Many tools could be used here. I chose Transkribus to segment and transcribe automatically 80 images from monographs 109, 109 bis and 110 ; I then corrected this first transcription handly.
 
 Transkribus allows exports in `ALTO` and `text` ([000_ground_truth.txt](https://github.com/jeandamien-genero/kraken-ocr-data/blob/main/training_data_sample/000_ground_truth.txt)).
 
