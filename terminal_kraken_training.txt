@@ -1,0 +1,51 @@
+(base) macbook-air-002:training_data jdgenero$ ketos train *.png
+Building training set  [####################################]  100%          
+Building validation set  [####################################]  100%
+[21.3279] alphabet mismatch: chars in training set only: {'&', 'ë', '/', '}', 'À', '*', '‘', 'Œ', '%', '?'} (not included in accuracy test during training) 
+Initializing model ✓
+stage 1/∞  [####################################]  2833/2833          Accuracy report (1) 0.9062 18814 1765
+/Applications/anaconda3/lib/python3.7/site-packages/coremltools/models/model.py:111: RuntimeWarning: You will not be able to run predict() on this Core ML model. Underlying exception message was: Error compiling model: "Error reading protobuf spec. validator error: Input MLMultiArray to neural networks must have dimension 1 (vector) or 3 (image-like arrays).".
+  RuntimeWarning)
+stage 2/∞  [####################################]  2833/2833           Accuracy report (2) 0.9663 18814 634
+/Applications/anaconda3/lib/python3.7/site-packages/coremltools/models/model.py:111: RuntimeWarning: You will not be able to run predict() on this Core ML model. Underlying exception message was: Error compiling model: "Error reading protobuf spec. validator error: Input MLMultiArray to neural networks must have dimension 1 (vector) or 3 (image-like arrays).".
+  RuntimeWarning)
+stage 3/∞  [#########################-----------]  2044/2833  00:14:25  
+stage 3/∞  [####################################]  2833/2833            Accuracy report (3) 0.9762 18814 448
+/Applications/anaconda3/lib/python3.7/site-packages/coremltools/models/model.py:111: RuntimeWarning: You will not be able to run predict() on this Core ML model. Underlying exception message was: Error compiling model: "Error reading protobuf spec. validator error: Input MLMultiArray to neural networks must have dimension 1 (vector) or 3 (image-like arrays).".
+  RuntimeWarning)
+stage 4/∞  [####################################]  2833/2833            Accuracy report (4) 0.9784 18814 406
+/Applications/anaconda3/lib/python3.7/site-packages/coremltools/models/model.py:111: RuntimeWarning: You will not be able to run predict() on this Core ML model. Underlying exception message was: Error compiling model: "Error reading protobuf spec. validator error: Input MLMultiArray to neural networks must have dimension 1 (vector) or 3 (image-like arrays).".
+  RuntimeWarning)
+stage 5/∞  [####################################]  2833/2833            Accuracy report (5) 0.9839 18814 303
+/Applications/anaconda3/lib/python3.7/site-packages/coremltools/models/model.py:111: RuntimeWarning: You will not be able to run predict() on this Core ML model. Underlying exception message was: Error compiling model: "Error reading protobuf spec. validator error: Input MLMultiArray to neural networks must have dimension 1 (vector) or 3 (image-like arrays).".
+  RuntimeWarning)
+stage 6/∞  [####################################]  2833/2833            Accuracy report (6) 0.9849 18814 285
+/Applications/anaconda3/lib/python3.7/site-packages/coremltools/models/model.py:111: RuntimeWarning: You will not be able to run predict() on this Core ML model. Underlying exception message was: Error compiling model: "Error reading protobuf spec. validator error: Input MLMultiArray to neural networks must have dimension 1 (vector) or 3 (image-like arrays).".
+  RuntimeWarning)
+stage 7/∞  [####################################]  2833/2833            Accuracy report (7) 0.9853 18814 276
+/Applications/anaconda3/lib/python3.7/site-packages/coremltools/models/model.py:111: RuntimeWarning: You will not be able to run predict() on this Core ML model. Underlying exception message was: Error compiling model: "Error reading protobuf spec. validator error: Input MLMultiArray to neural networks must have dimension 1 (vector) or 3 (image-like arrays).".
+  RuntimeWarning)
+stage 8/∞  [####################################]  2833/2833            Accuracy report (8) 0.9854 18814 274
+/Applications/anaconda3/lib/python3.7/site-packages/coremltools/models/model.py:111: RuntimeWarning: You will not be able to run predict() on this Core ML model. Underlying exception message was: Error compiling model: "Error reading protobuf spec. validator error: Input MLMultiArray to neural networks must have dimension 1 (vector) or 3 (image-like arrays).".
+  RuntimeWarning)
+stage 9/∞  [####################################]  2833/2833            Accuracy report (9) 0.9869 18814 247
+/Applications/anaconda3/lib/python3.7/site-packages/coremltools/models/model.py:111: RuntimeWarning: You will not be able to run predict() on this Core ML model. Underlying exception message was: Error compiling model: "Error reading protobuf spec. validator error: Input MLMultiArray to neural networks must have dimension 1 (vector) or 3 (image-like arrays).".
+  RuntimeWarning)
+stage 10/∞  [####################################]  2833/2833            Accuracy report (10) 0.9856 18814 271
+/Applications/anaconda3/lib/python3.7/site-packages/coremltools/models/model.py:111: RuntimeWarning: You will not be able to run predict() on this Core ML model. Underlying exception message was: Error compiling model: "Error reading protobuf spec. validator error: Input MLMultiArray to neural networks must have dimension 1 (vector) or 3 (image-like arrays).".
+  RuntimeWarning)
+stage 11/∞  [####################################]  2833/2833            Accuracy report (11) 0.9862 18814 259
+/Applications/anaconda3/lib/python3.7/site-packages/coremltools/models/model.py:111: RuntimeWarning: You will not be able to run predict() on this Core ML model. Underlying exception message was: Error compiling model: "Error reading protobuf spec. validator error: Input MLMultiArray to neural networks must have dimension 1 (vector) or 3 (image-like arrays).".
+  RuntimeWarning)
+stage 12/∞  [####################################]  2833/2833            Accuracy report (12) 0.9870 18814 244
+/Applications/anaconda3/lib/python3.7/site-packages/coremltools/models/model.py:111: RuntimeWarning: You will not be able to run predict() on this Core ML model. Underlying exception message was: Error compiling model: "Error reading protobuf spec. validator error: Input MLMultiArray to neural networks must have dimension 1 (vector) or 3 (image-like arrays).".
+  RuntimeWarning)
+stage 13/∞  [####################################]  2833/2833            Accuracy report (13) 0.9871 18814 243
+/Applications/anaconda3/lib/python3.7/site-packages/coremltools/models/model.py:111: RuntimeWarning: You will not be able to run predict() on this Core ML model. Underlying exception message was: Error compiling model: "Error reading protobuf spec. validator error: Input MLMultiArray to neural networks must have dimension 1 (vector) or 3 (image-like arrays).".
+  RuntimeWarning)
+stage 14/∞  [###############---------------------]  1193/2833  04:09:38  
+stage 14/∞  [####################################]  2833/2833            Accuracy report (14) 0.9864 18814 256
+/Applications/anaconda3/lib/python3.7/site-packages/coremltools/models/model.py:111: RuntimeWarning: You will not be able to run predict() on this Core ML model. Underlying exception message was: Error compiling model: "Error reading protobuf spec. validator error: Input MLMultiArray to neural networks must have dimension 1 (vector) or 3 (image-like arrays).".
+  RuntimeWarning)
+
+Moving best model model_9.mlmodel (0.9868714786860848) to model_best.mlmodel
