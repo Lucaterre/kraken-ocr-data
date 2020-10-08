@@ -34,7 +34,7 @@ This work was made by Jean-Damien Généro, engineer in the [Centre Maurice Halb
 
 #### Step one : getting images and binarzing them
 
-Images have been downloaded from the HathiTrust Digital Library and binarize using kraken (see [`binarize` function](https://github.com/jeandamien-genero/kraken-ocr-data/blob/a5e109407e1a36686e5384c68ab1a0f19711ad55/scripts/process_scripts.py#L16)).
+Images have been downloaded from the HathiTrust Digital Library and binarized using kraken (see [`binarize` function](https://github.com/jeandamien-genero/kraken-ocr-data/blob/a5e109407e1a36686e5384c68ab1a0f19711ad55/scripts/process_scripts.py#L16)).
 
 #### Step two : getting ground truth transcriptions
 
