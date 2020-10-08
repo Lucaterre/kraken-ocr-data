@@ -24,25 +24,31 @@ This work was made by Jean-Damien Généro, engineer in the [Centre Maurice Halb
 
 * `model_best.mlmodel` : best model resulting of Kraken training.
 
+## Data
+
+* 80 pages, 3150 segments and ground truth transcriptions.
+
+* 14 epochs, best model is 98% accuracy report.
+
 ## Process
 
-### Step one : getting images and binarzing them
+#### Step one : getting images and binarzing them
 
 Images have been downloaded from the HathiTrust Digital Library and binarize using kraken (see [`binarize` function](https://github.com/jeandamien-genero/kraken-ocr-data/blob/a5e109407e1a36686e5384c68ab1a0f19711ad55/scripts/process_scripts.py#L16)).
 
-### Step two : getting ground truth transcriptions
+#### Step two : getting ground truth transcriptions
 
 Ground truth transcriptions are needed to perform training according to [Kraken's documentation](http://kraken.re/ketos.html). Many tools could be used here. I chose Transkribus to segment and transcribe automatically 80 images from monographs 109, 109 bis and 110 ; I then corrected this first transcription handly.
 
 Transkribus allows exports in `ALTO` and `text`.
 
-### Step three : segmenting with Kraken and implementing ground truth
+#### Step three : segmenting with Kraken and implementing ground truth
 
-In a file containing all `.tiff`images, I ran the `ketos  transcribe -o output.html *.tiff` command. It initialized an `output.html` file containing segmented images and boxes for transcription of each segment. I filled out them with ground truth from Transkribus with the help of a Python `Beautifull Soup` script ([`training_data`](https://github.com/jeandamien-genero/kraken-ocr-data/blob/a5e109407e1a36686e5384c68ab1a0f19711ad55/scripts/process_scripts.py#L45)).
+In a directory containing all `.tiff`images, I ran the `ketos  transcribe -o output.html *.tiff` command. It initialized an `output.html` file containing segmented images and boxes for transcription of each segment. I filled out them with ground truth from Transkribus with the help of a Python `Beautifull Soup` script ([`training_data`](https://github.com/jeandamien-genero/kraken-ocr-data/blob/a5e109407e1a36686e5384c68ab1a0f19711ad55/scripts/process_scripts.py#L45)).
 
-### Step four : getting training data and perform actual training
+#### Step four : getting training data and perform actual training
 
-I ran the `ketos extract --output output_directory *.html`command, wich analizes the `output.html`file and create sa pair of `.png` and `.txt` files containing image of a segment and its ground truth transcription in a new directory (`output_directory`).
+I ran the `ketos extract --output output_directory *.html`command, wich analizes the `output.html`file and creates a pair of `.png` and `.txt` files containing image of a segment and its ground truth transcription in a new directory (`output_directory`).
 
 After this, I performed the actual training by running the `ketos train *.png` command in the `output_directory`. Fourteen epochs have been necessary to complete the training. A each epoch, a model is made up (`.mlmodel`) ; Kraken stops only when the error rate doesn not increasse significally anymore. It then choose a best model. My best model is epoch 9 (98% accuracy report). You can check out all the process in the [terminal_kraken_training.txt](https://github.com/jeandamien-genero/kraken-ocr-data/blob/main/terminal_kraken_training.txt) file.
 
@@ -53,4 +59,4 @@ After this, I performed the actual training by running the `ketos train *.png` c
 I am now able to transcribe an image with kraken, by running this command : `kraken -i [img file] [output file] segment ocr -m 
 model_best.mlmodel`.
 
-For an unknown reason, [@Lucaterre](https://github.com/Lucaterre) and I could not find the way to transcribe more than one image with a single command : at each time, the output file was rewritten. We solved this problem by writting a bash script wich iterate over every images in a directory[batch_recog_kraken.sh](https://github.com/jeandamien-genero/kraken-ocr-data/blob/main/scripts/batch_recog_kraken.sh).
+For an unknown reason, [@Lucaterre](https://github.com/Lucaterre) and I could not find the way to transcribe more than one image with a single command : at each time, the output file was rewritten. We solved this problem by writting a bash script wich iterate over every images in a directory [batch_recog_kraken.sh](https://github.com/jeandamien-genero/kraken-ocr-data/blob/main/scripts/batch_recog_kraken.sh).
