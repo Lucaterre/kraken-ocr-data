@@ -1,8 +1,10 @@
 # kraken-ocr-data
 
-:fire: [@jeandamien-genero](https://github.com/jeandamien-genero/)
+<p style="text-align: center">
+<img src="https://raw.githubusercontent.com/jeandamien-genero/kraken-ocr-data/main/kraken-alfred-tennyson.jpg"/>
 
-:fire_engine: special thanks to [@Lucaterre](https://github.com/Lucaterre)
+:fire: [@jeandamien-genero](https://github.com/jeandamien-genero/) — :fire_engine: special thanks to [@Lucaterre](https://github.com/Lucaterre)
+</p>
 
 ## About
 
@@ -60,5 +62,3 @@ I am now able to transcribe an image with kraken, by running this command : `kra
 model_best.mlmodel`.
 
 For an unknown reason, [@Lucaterre](https://github.com/Lucaterre) and I could not find the way to transcribe more than one image with a single command : at each time, the output file was rewritten. We solved this problem by writting a bash script wich iterate over every images in a directory [batch_recog_kraken.sh](https://github.com/jeandamien-genero/kraken-ocr-data/blob/main/scripts/batch_recog_kraken.sh).
-
-![kraken-alfred-tennyson](kraken-alfred-tennyson.jpg)
