@@ -1,10 +1,8 @@
 # kraken-ocr-data
 
-<p style="text-align: center">
-<img src="https://raw.githubusercontent.com/jeandamien-genero/kraken-ocr-data/main/kraken-alfred-tennyson.jpg"/>
+![kraken-alfred-tennyson](kraken-alfred-tennyson.jpg)
 
 :fire: [@jeandamien-genero](https://github.com/jeandamien-genero/) — :fire_engine: special thanks to [@Lucaterre](https://github.com/Lucaterre)
-</p>
 
 ## About
 
