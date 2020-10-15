@@ -76,7 +76,7 @@ def rename_file(directory, new_name) -> None:
     :return: none
     """
     for file in os.listdir(directory):
-        old_f = os.path.join("/Volumes/GENERO_TNAH/training_data/109a_output_directory", file)
-        new_f = os.path.join("/Volumes/GENERO_TNAH/training_data", new_name + file)
+        old_f = os.path.join(directory, file)
+        new_f = os.path.join(directory, new_name + file)
         os.rename(old_f, new_f)
         print("-----> {} renamed in {}".format(old_f, new_f))
