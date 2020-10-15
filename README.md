@@ -44,7 +44,9 @@ Transkribus allows exports in `ALTO` and `text` ([000_ground_truth.txt](https://
 
 #### Step three : segmenting with Kraken and implementing ground truth
 
-In a directory containing all `.tiff`images, I ran the `ketos  transcribe -o output.html *.tiff` command. It initialized an [`output.html`](https://github.com/jeandamien-genero/kraken-ocr-data/blob/main/output_109a.html) file containing segmented images and boxes for transcription of each segment. I filled them out with ground truth from Transkribus with the help of a Python `Beautifull Soup` script ([`training_data`](https://github.com/jeandamien-genero/kraken-ocr-data/blob/a5e109407e1a36686e5384c68ab1a0f19711ad55/scripts/process_scripts.py#L45)).
+In a directory containing all `.tiff`images, I ran the `ketos  transcribe -o output.html *.tiff` command. It initialized an [`output.html`](https://github.com/jeandamien-genero/kraken-ocr-data/blob/main/output_109a.html) file containing segmented images and boxes for transcription of each segment *(see below picture)*. I filled them out with ground truth from Transkribus with the help of a Python `Beautifull Soup` script ([`training_data`](https://github.com/jeandamien-genero/kraken-ocr-data/blob/a5e109407e1a36686e5384c68ab1a0f19711ad55/scripts/process_scripts.py#L45)).
+
+![sreen_output_html](sreen_output_html.png)
 
 #### Step four : getting training data and perform actual training
 
